@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600;700;800&family=Source+Sans+Pro:wght@400;600;700;900&display=swap');
+
+$primary: #1a6031;
+$secondary: #1d8040;
+$black: #000;
+$black-90: #191919;
+$black-50: #7f7f7f;
+$black-30: #b2b2b2;
+
+$theme-colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'black': $black,
+  'black-90': $black-90,
+  'black-50': $black-50,
+  'black-30': $black-30,
+);
+
+$font-family-base: 'Source Sans Pro', sans-serif;
+
+[class*='display'] {
+  line-height: 1 !important;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 1px;
+}
+
+.form-control {
+  border-radius: 0 !important;
+  background-clip: border-box !important;
+}
+
+.hint {
+  display: none;
+}
+
+textarea {
+  resize: none !important;
+}
+
+.btn {
+  border-radius: 50rem !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+  font-weight: bold !important;
+}
+
+.bg-gradient {
+  min-height: 100vh;
+  background: rgb(253, 251, 251);
+  background: linear-gradient(
+    176deg,
+    rgba(253, 251, 251, 1) 0%,
+    rgba(235, 237, 238, 1) 54%,
+    rgba(221, 250, 232, 1) 100%
+  );
+}
+
+#landing-banner {
+  .row {
+    background: rgb(41, 174, 63);
+    background: linear-gradient(
+      357deg,
+      rgba(41, 174, 63, 1) 0%,
+      rgba(29, 128, 64, 1) 64%,
+      rgba(26, 96, 49, 1) 100%
+    );
+  }
+
+  .col {
+    margin-top: 1.5rem;
+    height: 12.5rem;
+    background: url(https://res.cloudinary.com/dofqonp6x/image/upload/v1597766288/cpar/8252a921485945731c80edb2c6e07bc0_jmr3to.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 60%;
+    box-shadow: 0 14px 25px rgba(0, 0, 1, 0.2) !important;
+    background-position-x: 64%;
+  }
+
+  img {
+    height: 8rem;
+    width: auto;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  + div.container {
+    margin-top: -4rem;
+
+    > .row > .col:first-child {
+      margin-top: 5rem;
+
+      h2 {
+        font-size: 2.8rem;
+        font-weight: 800;
+      }
+    }
+
+    form {
+      background-color: #4d4641;
+      padding: 1rem;
+
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  #landing-banner h1 {
+    font-size: 1.8rem;
+  }
+  #landing-banner + div.container > .row > .col:first-child h2 {
+    font-size: 3rem;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  #landing-banner + div.container > .row > .col:first-child h2 {
+    font-size: 3.5rem;
+  }
+
+  #landing-banner + div.container form {
+    background-color: #4d4641;
+    padding: 1rem 2rem;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  #landing-banner + div.container > .row > .col:first-child h2 {
+    font-size: 4.2rem;
+  }
+
+  #landing-banner + div.container form {
+    width: 25rem;
+  }
+}
+
+@import '../../node_modules/bootstrap/scss/bootstrap';
