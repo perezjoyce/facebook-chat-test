@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600;700;800&family=Source+Sans+Pro:wght@400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
 
 $primary: #1a6031;
 $secondary: #1d8040;
@@ -162,6 +162,10 @@ nav {
   font-size: reset !important;
 }
 
+.display-4 {
+  font-size: 3rem !important;
+}
+
 h1 {
   line-height: 1 !important;
 }
@@ -237,12 +241,65 @@ h1 {
   );
 }
 
+#pricing-section {
+  .card {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  .card-body {
+    .card-title {
+      font-size: 1.4rem;
+      color: $black-70;
+    }
+
+    .card-currency {
+      margin-bottom: -5px;
+    }
+
+    .card-currency,
+    .card-subtitle {
+      font-weight: 300;
+      color: $black-50;
+    }
+
+    p.display-4 {
+      font-family: 'Cabin', sans-serif;
+    }
+
+    .fa-stack {
+      font-size: 0.5em;
+    }
+
+    .fa-stack > .fa-check {
+      font-size: 0.55rem;
+    }
+
+    i {
+      vertical-align: middle;
+    }
+  }
+
+  .card-footer {
+    height: 60px;
+    border-top: none;
+    background-color: inherit;
+
+    > div {
+      border-bottom-right-radius: 5px;
+    }
+  }
+}
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
+  #pricing-section {
+    height: 100vh;
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
 }
 
 // Extra large devices (large desktops, 1200px and up)
