@@ -339,10 +339,37 @@ h1 {
   right: 15px;
 }
 
+footer p,
+footer a {
+  color: #fff;
+}
+
+footer .social-media-links span.fa-stack:first-child > .fa-circle {
+  color: #272eae !important;
+}
+footer .social-media-links span.fa-stack:nth-child(2) > .fa-circle {
+  color: #1590d8 !important;
+}
+footer .social-media-links span.fa-stack:nth-child(3) > .fa-circle {
+  color: #d0021b !important;
+}
+footer .social-media-links span.fa-stack:last-child > .fa-circle {
+  color: #0e76a8 !important;
+}
+
+footer .row:nth-child(2) p,
+footer .row:nth-child(2) a,
+footer .row:nth-child(2) span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+}
+
 @media (min-width: 992px) {
   #pricing,
 #schedules,
-#testimonial {
+#testimonial,
+footer {
     height: 100vh;
     padding-left: 7rem;
     padding-right: 7rem;
@@ -353,6 +380,7 @@ h1 {
   }
 
   #testimonial {
+    height: 90vh;
     margin-top: 15rem;
   }
 
@@ -361,7 +389,7 @@ h1 {
   }
 
   footer {
-    height: 40vh;
+    height: 45vh !important;
   }
 }
 /*!
