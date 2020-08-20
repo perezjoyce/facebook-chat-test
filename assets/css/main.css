@@ -298,16 +298,46 @@ h1 {
   border: none;
 }
 
+#testimonial h2::before {
+  content: open-quote;
+}
+
+#testimonial h2::after {
+  content: close-quote;
+}
+
+#testimonial h2::before,
+#testimonial h2::after {
+  display: inline-block;
+  vertical-align: bottom;
+  color: #1a6031;
+  font-size: 1.2em;
+  top: 0.2em;
+  left: 0px;
+  position: relative;
+}
+
+#testimonial h2::before {
+  position: absolute;
+  top: 2.5rem;
+  left: 15px;
+}
+
 @media (min-width: 992px) {
   #pricing,
-#schedules {
+#schedules,
+#testimonial {
     height: 100vh;
     padding-left: 7rem;
     padding-right: 7rem;
   }
 
   #schedules {
-    height: 90vh;
+    height: 88vh;
+  }
+
+  #testimonial {
+    margin-top: 15rem;
   }
 }
 /*!
