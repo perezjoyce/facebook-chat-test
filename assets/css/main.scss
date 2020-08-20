@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600;700;800&family=Source+Sans+Pro:wght@400;600;700;900&display=swap');
+
+$primary: #1a6031;
+$secondary: #1d8040;
+$accent: #78c592;
+$font-color: #535858;
+$black: #000;
+$black-90: #191919;
+$black-70: #4b4b4c;
+$black-50: #7f7f7f;
+$black-30: #b2b2b2;
+$black-20: #cbcbcb;
+$black-10: #e5e5e5;
+
+$theme-colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'black': $black,
+  'black-90': $black-90,
+  'black-70': $black-70,
+  'black-50': $black-50,
+  'black-30': $black-30,
+  'black-20': $black-20,
+  'black-10': $black-10,
+);
+
+$font-family-base: 'Source Sans Pro', sans-serif;
+
+* {
+  font-size: 18px;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden !important;
+}
+
+.navbar-brand img {
+  height: 60px;
+  width: auto;
+}
+
+.navbar-toggler {
+  color: $primary !important;
+  border-color: transparent !important;
+}
+
+#navbar-toggler span {
+  color: $primary;
+  font-size: 25px;
+}
+
+ul.navbar-nav {
+  margin-bottom: 0.25rem !important;
+}
+
+.nav-item .nav-link {
+  position: relative;
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+.nav-item .nav-link:hover,
+.nav-item .nav-link:active,
+.nav-item .nav-link:focus {
+  color: $secondary;
+  text-decoration: none;
+}
+
+.nav-link:before {
+  content: '';
+  position: absolute;
+  width: 40%;
+  height: 3px;
+  bottom: 1px;
+  left: 30%;
+  border-radius: 5px;
+  background-color: $secondary;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-item.active .nav-link {
+  color: $primary;
+  font-weight: 600;
+}
+
+.nav-link:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+nav .btn:nth-child(2),
+nav .btn:last-child {
+  width: 9rem;
+  border-radius: 50rem !important;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+nav .btn:nth-child(2) {
+  background: linear-gradient(253.58deg, #185f31 1.55%, #17803f 95.8%);
+  box-shadow: 0px 12px 35px rgba(40, 114, 51, 0.13);
+  border: none;
+}
+
+nav {
+  height: 12.5vh;
+  border-top: 0.5rem solid $secondary;
+  align-content: center;
+}
+
+#home-banner {
+  position: absolute;
+  height: 87.5vh;
+  width: 100vw;
+  left: 0px;
+  background: linear-gradient(
+      282.7deg,
+      rgba(28, 96, 37, 0.576) 7.87%,
+      rgba(126, 193, 135, 0.8) 77.94%
+    ),
+    url(https://res.cloudinary.com/dofqonp6x/image/upload/v1597766818/cpar/IMG_4334_ho0k5a.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 40%;
+  position: relative;
+
+  .hero-text > h1 {
+    position: absolute;
+    top: 4rem;
+    left: 8rem;
+  }
+
+  .hero-style .circle {
+    position: absolute;
+    width: 37px;
+    height: 37px;
+    right: 357px;
+    top: 37px;
+    background: $accent;
+  }
+
+  .hero-style .rectangle {
+    position: absolute;
+    width: 380px;
+    height: 37px;
+    right: -37px;
+    top: 37px;
+
+    background: $accent;
+    border-radius: 56px;
+  }
+}
+
+[class*='display'] {
+  font-weight: bold !important;
+  font-size: reset !important;
+}
+
+h1 {
+  line-height: 1 !important;
+}
+
+.text-lead {
+  width: 40%;
+}
+
+.icon {
+  height: 65px;
+  width: auto;
+}
+
+.line-container {
+  height: 2.5rem;
+}
+
+.line {
+  content: '';
+  width: 100px;
+  height: 7px;
+  border-radius: 5px;
+  background-color: $accent;
+}
+
+@mixin about-banner($url, $lineColor: $accent) {
+  position: absolute;
+  height: 70vh;
+  width: 100vw;
+  left: 0px;
+  background: linear-gradient(
+      282.27deg,
+      #87bb8a 10.32%,
+      rgba(42, 81, 42, 0.61) 90.12%
+    ),
+    url($url);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  position: relative;
+
+  .overlay-text {
+    width: 35%;
+  }
+
+  .overlay-text h3 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .line {
+    width: 80px;
+    background-color: $lineColor !important;
+  }
+}
+
+#financial-accounting-banner {
+  @include about-banner(
+    'https://res.cloudinary.com/dofqonp6x/image/upload/v1597847692/cpar/a0622b4008e98e4f77f20bde455cc4d5_z6w6k0.jpg'
+  );
+}
+
+#live-reviewers-banner {
+  @include about-banner(
+    'https://res.cloudinary.com/dofqonp6x/image/upload/v1597847693/cpar/540b47cee69e03c29918d12831d070ad_jhrtlf.jpg',
+    $secondary
+  );
+}
+
+#flexible-payment-banner {
+  @include about-banner(
+    'https://res.cloudinary.com/dofqonp6x/image/upload/v1597847692/cpar/a26aefd3d9d86a66b90ae36ecf018f1a_itnt5k.jpg'
+  );
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+@import '../../node_modules/bootstrap/scss/bootstrap';
