@@ -225,47 +225,89 @@ h1 {
   background-color: #78c592 !important;
 }
 
-#pricing-section .card {
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-#pricing-section .card-body .card-title {
+#pricing .card-body .card-title {
   font-size: 1.4rem;
   color: #4b4b4c;
 }
-#pricing-section .card-body .card-currency {
+#pricing .card-body .card-currency {
   margin-bottom: -5px;
 }
-#pricing-section .card-body .card-currency,
-#pricing-section .card-body .card-subtitle {
+#pricing .card-body .card-currency,
+#pricing .card-body .card-subtitle {
   font-weight: 300;
   color: #7f7f7f;
 }
-#pricing-section .card-body p.display-4 {
+#pricing .card-body p.display-4 {
   font-family: "Cabin", sans-serif;
 }
-#pricing-section .card-body .fa-stack {
+#pricing .card-body .fa-stack {
   font-size: 0.5em;
 }
-#pricing-section .card-body .fa-stack > .fa-check {
+#pricing .card-body .fa-stack > .fa-check {
   font-size: 0.55rem;
 }
-#pricing-section .card-body i {
+#pricing .card-body i {
   vertical-align: middle;
 }
-#pricing-section .card-footer {
+
+#pricing .card,
+#schedules .card {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+#pricing .card .card-footer,
+#schedules .card .card-footer {
   height: 60px;
   border-top: none;
   background-color: inherit;
 }
-#pricing-section .card-footer > div {
+#pricing .card .card-footer > div,
+#schedules .card .card-footer > div {
   border-bottom-right-radius: 5px;
 }
 
+#schedules {
+  background: linear-gradient(180deg, #5c9c73 0%, #185f31 100%);
+}
+#schedules > .row {
+  position: relative;
+  top: 5rem;
+}
+#schedules > .row .col:first-child {
+  margin-bottom: 4rem;
+}
+#schedules .card {
+  min-height: 30rem;
+  text-align: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+#schedules .card-title span {
+  font-size: 1.75rem !important;
+}
+#schedules .card-time {
+  font-size: 1.4rem;
+  color: #1d8040;
+}
+#schedules .btn {
+  width: 9rem;
+  border-radius: 50rem !important;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: linear-gradient(253.58deg, #185f31 1.55%, #17803f 95.8%);
+  box-shadow: 0px 12px 35px rgba(40, 114, 51, 0.13);
+  border: none;
+}
+
 @media (min-width: 992px) {
-  #pricing-section {
+  #pricing,
+#schedules {
     height: 100vh;
     padding-left: 7rem;
     padding-right: 7rem;
+  }
+
+  #schedules {
+    height: 90vh;
   }
 }
 /*!
