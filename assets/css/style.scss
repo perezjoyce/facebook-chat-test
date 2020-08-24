@@ -69,7 +69,7 @@ textarea {
   .col {
     margin-top: 1.5rem;
     height: 12.5rem;
-    background: url(https://res.cloudinary.com/dofqonp6x/image/upload/v1597766288/cpar/8252a921485945731c80edb2c6e07bc0_jmr3to.jpg);
+    background: url(https://res.cloudinary.com/dofqonp6x/image/upload/v1597990730/cpar/banner_zfasys.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 60%;
@@ -78,7 +78,7 @@ textarea {
   }
 
   img {
-    height: 8rem;
+    height: 6rem;
     width: auto;
   }
 
@@ -87,6 +87,7 @@ textarea {
     font-weight: 700;
     letter-spacing: 1px;
     font-family: 'Raleway', sans-serif;
+    line-height: 1;
   }
 
   + div.container {
@@ -113,13 +114,21 @@ textarea {
   }
 }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  #landing-banner h1 {
-    font-size: 1.8rem;
+// Small devices
+@media (min-width: 470px) {
+  #landing-banner .col {
+    background-position-x: 26%;
   }
+
   #landing-banner + div.container > .row > .col:first-child h2 {
     font-size: 3rem;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  #landing-banner .col {
+    background-position-x: 0%;
   }
 }
 
