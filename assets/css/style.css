@@ -47,7 +47,7 @@ textarea {
   background-position-x: 64%;
 }
 #landing-banner img {
-  height: 8rem;
+  height: 6rem;
   width: auto;
 }
 #landing-banner h1 {
@@ -55,6 +55,7 @@ textarea {
   font-weight: 700;
   letter-spacing: 1px;
   font-family: "Raleway", sans-serif;
+  line-height: 1;
 }
 #landing-banner + div.container {
   margin-top: -4rem;
@@ -75,13 +76,18 @@ textarea {
   font-weight: 600;
 }
 
-@media (min-width: 768px) {
-  #landing-banner h1 {
-    font-size: 1.8rem;
+@media (min-width: 470px) {
+  #landing-banner .col {
+    background-position-x: 26%;
   }
 
   #landing-banner + div.container > .row > .col:first-child h2 {
     font-size: 3rem;
+  }
+}
+@media (min-width: 768px) {
+  #landing-banner .col {
+    background-position-x: 0%;
   }
 }
 @media (min-width: 992px) {
